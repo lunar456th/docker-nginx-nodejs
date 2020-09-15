@@ -1,7 +1,7 @@
 FROM node:latest
 WORKDIR /nodejs
-COPY package*.json ./
+COPY ./nodejs/package*.json ./
 RUN npm install --silent
-COPY . .
+COPY ./nodejs .
 CMD [ "npm", "start" ]
 EXPOSE 3000
