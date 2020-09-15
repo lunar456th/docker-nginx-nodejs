@@ -9,5 +9,12 @@ services:
         restart: always
         volumes:
             - nodejs:/nodejs
+        networks:
+            - nodejs
+
 volumes:
     nodejs: {}
+
+networks:
+    nodejs:
+        driver: bridge
