@@ -1,4 +1,5 @@
 FROM node:latest
+MAINTAINER pikamon "lunar456th@naver.com"
 WORKDIR /nodejs
 COPY ./nodejs/package*.json ./
 RUN npm install --silent
