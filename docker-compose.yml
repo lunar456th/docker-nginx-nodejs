@@ -3,7 +3,7 @@ version: '3.0'
 services:
     nodejs:
         container_name: nodejs
-        build: .
+        build: ./nodejs
         ports:
             - 3000:3000
         restart: always
@@ -11,10 +11,27 @@ services:
             - nodejs:/nodejs
         networks:
             - nodejs
+    nginx:
+        container_name: nginx
+        build: ./nginx
+        ports:
+            - 80:80
+        restart: always
+        volumes:
+            - nginx_nginx:/etc/nginx
+            - nginx_html:/usr/share/nginx/html
+        networks:
+            - nginx
+        links:
+            - nodejs
 
 volumes:
     nodejs: {}
+    nginx_nginx: {}
+    nginx_html: {}
 
 networks:
     nodejs:
+        driver: bridge
+    nginx:
         driver: bridge
