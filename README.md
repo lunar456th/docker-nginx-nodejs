@@ -1,4 +1,4 @@
-# node-hello-docker
+# docker-nginx-nodejs
 
 This is helloworld example using Docker + Nginx + Node.js.
 
