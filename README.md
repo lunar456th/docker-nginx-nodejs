@@ -1,16 +1,18 @@
 # node-hello-docker
 
-Hello world of Node.js with Dockerfile and docker-compose
+This is helloworld example using Docker + Nginx + Node.js.
 
 ## Components
 
-* Node.js
-* Npm
-  * Express
-  * Nodemon
 * Docker
   * Dockerfile
   * docker-compose
+* Nginx
+  * reverse proxy
+* Node.js
+  * Npm
+    * express
+    * nodemon
 
 ## Usage
 
@@ -24,6 +26,6 @@ stop
 
 ## Test
 
-    curl http://localhost:3000
+    curl http://localhost
 
 
