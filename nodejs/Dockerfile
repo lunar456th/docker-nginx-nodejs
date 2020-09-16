@@ -1,7 +1,7 @@
 FROM debian:latest
 MAINTAINER pikamon "lunar456th@naver.com"
 RUN apt-get update -y
-RUN apt-get install -y -qq nodejs npm
+RUN apt-get install -y nodejs npm
 WORKDIR /nodejs
 COPY ./nodejs/package*.json ./
 RUN npm install --silent

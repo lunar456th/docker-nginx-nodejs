@@ -16,10 +16,11 @@ services:
         build: ./nginx
         ports:
             - 80:80
+            - 443:443
         restart: always
         volumes:
-            - nginx_nginx:/etc/nginx
-            - nginx_html:/usr/share/nginx/html
+            - nginx:/etc/nginx
+            - html:/usr/share/nginx/html
         networks:
             - nginx
         links:
@@ -27,8 +28,8 @@ services:
 
 volumes:
     nodejs: {}
-    nginx_nginx: {}
-    nginx_html: {}
+    nginx: {}
+    html: {}
 
 networks:
     nodejs:
