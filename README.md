@@ -9,6 +9,7 @@ This is helloworld example using Docker + Nginx + Node.js.
   * docker-compose
 * Nginx
   * reverse proxy
+  * https
 * Node.js
   * Npm
     * express
