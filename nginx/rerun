@@ -1,0 +1,10 @@
+#!/bin/bash
+docker stop nginx_node
+docker rm nginx_node
+docker rmi nginx_node
+
+docker build -t nginx_node .
+docker run -it --name nginx_node -d -p 80:80 nginx_node
+
+lsof -i:80
+curl http://localhost
